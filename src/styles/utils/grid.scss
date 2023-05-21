@@ -1,0 +1,29 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+.col-2 {
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: repeat(auto-fill, minmax(540rem, 1fr));
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}
+.col-6 {
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: repeat(auto-fill, minmax(160rem, 1fr));
+
+    @include tablet {
+        
+    }
+}
+.col-3 {
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: repeat(auto-fill, minmax(350rem, 1fr));
+
+    @include tablet {
+        
+    }
+}

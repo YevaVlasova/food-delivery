@@ -1,0 +1,41 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.hot-item {
+    display: flex;
+    gap: 16rem;
+    border-radius: 16px;
+    background: $fillBlue;
+
+    &:nth-child(2n) {
+        background: $fillOrange;
+        .hot-item__discount {
+            color: $accent;
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__info {
+        padding: 24rem 24rem 16rem 0;
+    }
+
+    &__title {
+        @include text($ff, 600, 20rem, 28rem, $black);
+        letter-spacing: 0.1px;
+        margin-bottom: 8rem;
+    }
+
+    &__discount {
+        @include text($ff, 800, 40rem, 56rem, $primaryDef);
+        letter-spacing: 0.1px;
+        margin-bottom: 36rem;
+    }
+
+    &__desc {
+        @include text($ff, 400, 14rem, 20rem, $text);
+        letter-spacing: 0.1px;
+    }
+}

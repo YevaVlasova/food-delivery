@@ -1,0 +1,26 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+.input {
+    position: relative;
+    &__field {
+        background: $fill;
+        border-radius: 12rem;
+        padding: 10rem 12rem;
+        padding-right: 48rem;
+        @include text($ff, 400, 14rem, 20rem, $text);
+        letter-spacing: 0.1rem;
+        outline: 0;
+        border: 0;
+        &::placeholder {
+            color: $text;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        position: absolute;
+        right: 12rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
