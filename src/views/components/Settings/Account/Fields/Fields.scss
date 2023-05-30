@@ -1,0 +1,37 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.field-firstLine {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.fields-input {
+    @include text($ff, 600, 12rem, 16rem, $icons);
+
+	&__field {
+        border: 1rem solid #C7C8D2;
+        border-radius: $radiusSmall;
+        padding: 12rem;
+        width: 340rem;
+        @include text($ff, 400, 14rem, 20rem, $black);
+        letter-spacing: 0.1px;
+	}
+}
+
+.field-secondLine {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+    margin-bottom: 68rem;
+}

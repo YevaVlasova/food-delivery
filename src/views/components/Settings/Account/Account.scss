@@ -1,0 +1,23 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.account {
+
+    &__title {
+        @include text($ff, 600, 20rem, 28rem, $black);
+        letter-spacing: 0.1px;
+        margin-bottom: 16rem;
+    }
+
+    &__field {
+        background: $white;
+        border: 1rem solid $fill;
+        border-radius: $radiusRound;
+        padding: 24rem 16rem 20rem;
+    }
+
+    &__desc {
+        @include text($ff, 700, 18rem, 24rem, $black);
+        letter-spacing: 0.1px;
+        margin-bottom: 16rem;
+    }
+}

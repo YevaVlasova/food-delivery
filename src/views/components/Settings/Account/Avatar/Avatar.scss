@@ -1,0 +1,43 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    &__title {
+        @include text($ff, 600, 12rem, 16rem, $icons);
+    }
+}
+.avatar-info {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    margin-bottom: 16rem;
+
+    &__img img {
+        width: 88rem;
+        height: 88rem;
+        border-radius: $radius;
+        margin-right: 9rem;
+    }
+
+    &__btn-one {
+        cursor: pointer;
+        border: 1rem solid $primaryDef;
+        border-radius: $radiusSmall;
+        padding: 12rem 16rem;
+        @include text($ff, 700, 14rem, 20rem, $primaryDef);
+        letter-spacing: 0.3px;
+    }
+
+    &__btn-two {
+        cursor: pointer;
+        border: none;
+        border-radius: $radiusSmall;
+        padding: 12rem 16rem;
+        @include text($ff, 700, 14rem, 20rem, $text);
+        letter-spacing: 0.3px;
+    }
+}

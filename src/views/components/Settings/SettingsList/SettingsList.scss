@@ -1,0 +1,10 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.settings {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+    }
+}

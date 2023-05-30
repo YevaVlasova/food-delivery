@@ -1,0 +1,46 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.settings-item {
+    background: $white;
+    border: 1rem solid $fill;
+    border-radius: $radiusRound;
+    padding: 16rem;
+    max-width: 350rem;
+    display: flex;
+    gap: 12rem;
+    cursor: pointer;
+    align-items: center;
+    &:hover {
+        background: $fillBlue;
+        border: 1rem solid $primaryDef;
+        .settings-item__img {
+            background: $primaryDef;
+        }
+        .settings-item__img svg:hover {
+            fill: #FFFFFF;
+            
+        }
+    }
+
+    &__img {
+        background: $fill;
+        border-radius: $radius;
+        padding: 10rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__title {
+        @include text($ff, 700, 14rem, 20rem, $black);
+        letter-spacing: 0.1px;
+    }
+
+    &__desc {
+        @include text($ff, 400, 13rem, 18rem, $icons);
+        letter-spacing: 0.2px;
+    }
+}

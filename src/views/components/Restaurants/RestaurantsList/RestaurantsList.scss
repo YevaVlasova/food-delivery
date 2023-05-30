@@ -1,0 +1,12 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+
+.restaurants {
+    margin-bottom: 100rem;
+}
+
+.restaurants-title {
+    @include text($ff, 600, 20rem, 28rem, $black);
+    letter-spacing: 0.1px;
+    margin-bottom: 16rem;
+}

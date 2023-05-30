@@ -1,0 +1,25 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30rem;
+    align-items: start;
+    padding-top: 24rem;
+}
+.profile-settings {
+
+    &__title {
+        @include text($ff, 600, 20rem, 28rem, $black);
+        letter-spacing: 0.1px;
+        margin-bottom: 16rem;
+    }
+}
+.profile-account {
+
+    &__title {
+        @include text($ff, 600, 20rem, 28rem, $black);
+        letter-spacing: 0.1px;
+        margin-bottom: 16rem;
+    }
+}

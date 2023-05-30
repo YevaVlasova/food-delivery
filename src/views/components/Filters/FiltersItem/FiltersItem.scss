@@ -1,0 +1,28 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+.filters-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $white;
+    border: 1rem solid $fill;
+    border-radius: $radiusRound;
+    padding: 14rem 16rem 12rem;
+    gap: 12rem;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background: $hoverBg;
+        transition: $transition;
+        border: 1rem solid $primaryHov;
+    }
+    &__img img {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    &__title {
+        @include text($ff, 700, 13rem, 18rem, $icons);
+        letter-spacing: 0.1px;
+    }
+}

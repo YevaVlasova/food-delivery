@@ -1,0 +1,96 @@
+@import '/src/styles/utils/vars';
+@import '/src/styles/utils/mixins';
+
+.restaurant-item {
+    background: $white;
+    border: 1rem solid $fill;
+    border-radius: $radiusRound;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background: $fillBlue;
+        transition: $transition;
+        border: 1rem solid $primaryHov;
+    }
+    &__img {
+        overflow: hidden;
+        max-width: 350rem;
+    }
+
+    &__img img {
+        border-radius: $radiusRound $radiusRound 0 0;
+        min-width: 350rem;
+        height: auto;
+        transition: $transition;
+        object-fit: cover;
+    }
+
+    &__info {
+        padding: 16rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+
+    &__header-title {
+        @include text($ff, 700, 18rem, 24rem, $black);
+        letter-spacing: 0.1px;
+    }
+
+    &__process {
+        display: flex;
+        align-items: center;
+        gap: 19rem;
+        margin-bottom: 14rem;
+        @include text($ff, 600, 12rem, 16rem, $text);
+    }
+
+    &__process-time {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    &__process-cost {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        position: relative;
+        &__dot {
+            position: absolute;
+            left: -11rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            background: $primaryDef;
+            width: 3px;
+            height: 3px;
+            border-radius: $radiusImage;
+        }
+    }
+
+    &__filters {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    &__desc {
+        background: $fill;
+        border-radius: 100rem;
+        padding: 6rem 10rem;
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        @include text($ff, 600, 12rem, 16rem, $icons);
+        img {
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+}
